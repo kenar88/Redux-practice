@@ -1,4 +1,5 @@
-import * as actionTypes from '../actions';
+import * as actionTypes from '../../store/actions/actions';
+
 
 const initialState = {   
     result: []
@@ -17,10 +18,10 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 result: newResult
-        }                 
+        }
+        default:
+            return state;                 
     } 
-        
-    return state 
-    }   
+}   
 
 export default reducer;
